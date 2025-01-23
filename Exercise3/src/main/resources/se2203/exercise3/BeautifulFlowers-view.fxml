@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se2203.exercise3.BeautifulFlowersController">
+   <children>
+      <TitledPane animated="false" layoutX="8.0" layoutY="57.0" prefHeight="82.0" prefWidth="174.0" text="About Me">
+         <content>
+            <VBox prefHeight="41.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="129.0" text="Name: Hamish De Jong" />
+                  <Label prefHeight="18.0" prefWidth="174.0" text="Email: hdejong4@uwo.ca" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <VBox alignment="CENTER_LEFT" layoutX="8.0" layoutY="118.0" prefHeight="200.0" prefWidth="131.0">
+         <children>
+            <RadioButton fx:id="roseRadioButton" mnemonicParsing="false" onAction="#roseRadioButtonListener" selected="true" text="Rose">
+               <toggleGroup>
+                  <ToggleGroup fx:id="flowersToggleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="callaLilyRadioButton" mnemonicParsing="false" onAction="#callaLilyRadioButtonListener" text="Calla Lily" toggleGroup="$flowersToggleGroup" />
+            <RadioButton fx:id="cannaRadioButton" mnemonicParsing="false" onAction="#cannaRadioButtonListener" text="Canna" toggleGroup="$flowersToggleGroup" />
+            <RadioButton fx:id="bleedingHeartRadioButton" mnemonicParsing="false" onAction="#bleedingHeartRadioButtonListener" text="Bleeding Heart" toggleGroup="$flowersToggleGroup" />
+            <RadioButton fx:id="cherryBlossomRadioButton" mnemonicParsing="false" onAction="#cherryBlossomRadioButtonListener" text="Cherry Blossom" toggleGroup="$flowersToggleGroup" />
+         </children>
+      </VBox>
+      <ImageView fx:id="flowersImageView" fitHeight="300.0" fitWidth="300.0" layoutX="188.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Rose.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="flowersNote" layoutX="496.0" layoutY="25.0" prefHeight="300.0" prefWidth="140.0" text="This beautiful flower and symbol of love belongs the genus Rosa. The family name of this flower is Rosaceae and it contains different other species in almost all parts of the world. The flower of rose vary in size from each other depending upon the species to which they belong. A large number of species of this flower are found in different parts of Asia." wrapText="true" />
+   </children>
+</AnchorPane>
